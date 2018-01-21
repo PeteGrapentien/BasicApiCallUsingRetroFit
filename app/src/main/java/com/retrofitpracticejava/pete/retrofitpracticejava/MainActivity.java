@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Retrofit retrofit = builder.build();
 
         GithubServiceInterface client = retrofit.create(GithubServiceInterface.class);
-        Call<List<Repo>> call = client.listRepos("octocat");
+        Call<List<Repo>> call = client.listRepos("PeteGrapentien");
 
         call.enqueue(new Callback<List<Repo>>() {
             @Override
